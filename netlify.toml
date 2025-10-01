@@ -1,5 +1,6 @@
 [build]                   
   functions = "dist"
+  publish = "."
 
 [[redirects]]
   from = "/*"
@@ -11,6 +12,7 @@
   to = "/style.css"
   status = 200
   force = true
+
 
 
 
