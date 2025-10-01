@@ -18,7 +18,7 @@ let temp = fs.readFileSync("./pages/index.html", 'utf-8');
 let abtmvi = fs.readFileSync("./pages/about.html", 'utf-8');
 
 // Create Server
-const server = http.createServer((req, res) => {
+const handler = http.createServer((req, res) => {
     let { query, pathname } = url.parse(req.url, true);
 
     pathname = pathname.replace('/.netlify/functions/app', '') || '/';
@@ -58,8 +58,9 @@ const server = http.createServer((req, res) => {
         res.end('Error: 404 Not Found');
     }
 });
-
+const server = require('http').createServer(handler);
 module.exports.handler = serverless(server);
+
 
 
 
