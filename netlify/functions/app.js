@@ -5,13 +5,14 @@ const { error } = require('console');
 const http = require('http');
 const url = require('url');
 const serverless = require("serverless-http");
+const path = require("path");
 
 // User-defined modules
 const page = require("../../modules/Card_Replace");
 const desc = require("../../modules/About_Data_replace");
 
 // Load data and templates
-let list = JSON.parse(fs.readFileSync("./JSON_Data/list_movies.json", 'utf-8'));
+const list = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../../JSON_Data/list_movies.json"), 'utf-8'));
 let lst = fs.readFileSync("./pages/list.html", 'utf-8');
 let temp = fs.readFileSync("./pages/index.html", 'utf-8');
 let abtmvi = fs.readFileSync("./pages/about.html", 'utf-8');
@@ -59,6 +60,7 @@ const server = http.createServer((req, res) => {
 });
 
 module.exports.handler = serverless(server);
+
 
 
 
