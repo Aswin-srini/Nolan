@@ -20,7 +20,7 @@ let abtmvi = fs.readFileSync("./pages/about.html", 'utf-8');
 const server = http.createServer((req, res) => {
     let { query, pathname } = url.parse(req.url, true);
 
-    pathname = pathname.replace('/.netlify/functions/server', '') || '/';
+    pathname = pathname.replace('/.netlify/functions/app', '') || '/';
 
     // Serve CSS file
     if (pathname === '/style.css') {
@@ -63,3 +63,4 @@ module.exports.handler = serverless(server);
 server.listen(8000, '127.0.0.1', () => {
     console.log('Server Created at http://127.0.0.1:8000');
 });
+
