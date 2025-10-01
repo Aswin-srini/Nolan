@@ -4,8 +4,8 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server/:splat"
+  from = "/*"
+  to = "/.netlify/functions/server"
   status = 200
 
 [[redirects]]
@@ -13,3 +13,4 @@
   to = "/style.css"
   status = 200
   force = true
+
