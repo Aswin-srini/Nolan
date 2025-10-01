@@ -1,5 +1,5 @@
 [build]
-  command = "netlify/functions/server.js"       
+  command = "netlify/functions/app.js"       
   publish = "build"               
   functions = "netlify/functions"
 
@@ -13,5 +13,6 @@
   to = "/style.css"
   status = 200
   force = true
+
 
 
