@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+      <p>Cristopher Nolan</p>
+       <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Filmography</a></li>
+        <li><a href="#">About Nolan</a></li>
+      </ul>
+  </nav>
+  <div class="movie-container">
+  <div class="movie-poster">
+    <img src="{{%IMAGE%}}" alt="Movie Poster">
+  </div>
+
+  <div class="movie-details">
+      <h1 class="movie-title">{{%NAME%}}</h1>
+      <p class="movie-description">{{%DESC%}}</p>
+
+      <div class="movie-section">
+        <h2>Cast</h2>
+        <ul>
+          <li>{{%ACT1%}} as {{%chr1%}}</li>
+          <li>{{%ACT2%}} as {{%chr2%}}</li>
+          <li>{{%ACT3%}} as {{%chr3%}}</li>
+        </ul>
+      </div>
+
+      <div class="movie-section">
+        <h2>Crew</h2>
+        <ul>
+          <li>Director: {{%DIRECTOR%}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+</script>
+</html>
