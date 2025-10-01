@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"       # Update if you use yarn or a different build command
-  publish = "build"               # Update this to your actual output folder (e.g., "dist", "out", or "public")
+  command = "netlify/functions/server.js"       
+  publish = "build"               
   functions = "netlify/functions"
 
 [[redirects]]
@@ -13,4 +13,5 @@
   to = "/style.css"
   status = 200
   force = true
+
 
