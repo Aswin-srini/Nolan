@@ -4,6 +4,7 @@
   "main": "netlify/functions/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify-lambda build netlify/functions"
   },
   "keywords": [],
   "author": "",
