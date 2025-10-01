@@ -60,7 +60,5 @@ const server = http.createServer((req, res) => {
 
 module.exports.handler = serverless(server);
 
-server.listen(8000, '127.0.0.1', () => {
-    console.log('Server Created at http://127.0.0.1:8000');
-});
+
 
